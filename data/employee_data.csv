@@ -1,0 +1,22 @@
+import pandas as pd
+import numpy as np
+import random
+
+# Define the data
+data = {
+    'EmployeeID': np.arange(1, 101),
+    'Age': np.random.randint(22, 60, size=100),  # Random ages between 22 and 60
+    'YearsAtCompany': np.random.randint(1, 35, size=100),  # Random years at the company
+    'MonthlyIncome': np.random.randint(3000, 15000, size=100),  # Random monthly income between 3000 and 15000
+    'JobSatisfaction': np.random.randint(1, 5, size=100),  # Random job satisfaction (1 to 4)
+    'Department': np.random.choice(['Sales', 'HR', 'Engineering', 'Marketing', 'Finance'], size=100),  # Random department
+    'Turnover': np.random.choice([0, 1], size=100, p=[0.7, 0.3])  # 70% no turnover, 30% turnover
+}
+
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+# Save to CSV file
+df.to_csv('employee_data.csv', index=False)
+
+print("employee_data.csv file generated successfully!")

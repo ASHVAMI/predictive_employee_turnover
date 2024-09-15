@@ -1,0 +1,13 @@
+mkdir models
+python scripts/train.py
+import joblib
+
+# Load the saved decision tree model
+model = joblib.load('../models/decision_tree_model.pkl')
+
+# Example prediction (with an example input)
+input_data = [[35, 10, 5000, 3, 1, 1, 0]]  # Replace with actual input
+prediction = model.predict(input_data)
+
+print("Prediction:", prediction)
+

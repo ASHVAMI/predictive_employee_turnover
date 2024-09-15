@@ -1,0 +1,9 @@
+Logistic Regression Model:
+Accuracy: 85%
+Precision: 0.84
+Recall: 0.81
+
+Decision Tree Model:
+Accuracy: 87%
+Precision: 0.85
+Recall: 0.83
